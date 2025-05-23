@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DateApp.ViewModels"
+        x:Class="DateApp.Views.MainWindow"
+        Title="Приложение для работы с датами"
+        Width="400" Height="500"
+        x:DataType="vm:MainWindowViewModel">
+         
+    <StackPanel Margin="10">
+        <TextBlock Text="Введите дату (дд.ММ.гггг):"/>
+        <TextBox Text="{Binding DateInput}"/>
+        <Button Content="Установить дату" Command="{Binding SetDateCommand}"/>
+        <TextBlock Text="Текущая дата:"/>
+        <TextBlock Text="{Binding CurrentDate}"/>
+        <TextBlock Text="Добавить дни:"/>
+        <TextBox Text="{Binding DaysToAdd}"/>
+        <Button Content="Добавить дни" Command="{Binding AddDaysCommand}"/>
+        <TextBlock Text="Добавить месяцы:"/>
+        <TextBox Text="{Binding MonthsToAdd}"/>
+        <Button Content="Добавить месяцы" Command="{Binding AddMonthsCommand}"/>
+        <TextBlock Text="Добавить годы:"/>
+        <TextBox Text="{Binding YearsToAdd}"/>
+        <Button Content="Добавить годы" Command="{Binding AddYearsCommand}"/>
+    </StackPanel>
+</Window>
